@@ -1,9 +1,11 @@
 {
     "compilerOptions": {
-        "lib": ["ESNext", "DOM"],
+        "lib": ["ESNext"],
+        "target": "ES5",
         "strict": true,
         "module": "CommonJS",
-        "moduleResolution": "Node"
+        "moduleResolution": "Node",
+        "esModuleInterop": true
     }
 }
 
@@ -13,3 +15,5 @@
 // module -> determines the module system of the TypeScript compiler and the module type in the JavaScript files it outputs (AMD, CommonJS, ES6 etc)
 // allowJs -> allows us to use JavaScript inside TypeScript
 // moduleResolution -> refers to a setting that determines the strategy for finding and resolving module files
+// esModuleInterop -> it is used to resolve incompatibilities between CommonJS and ES6 module systems and makes "import" expressions work more smoothly.
+// target -> specify which language the project should be compiled to (ES3, ES4, ES5, ES6 ect)
