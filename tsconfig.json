@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "lib": ["ESNext", "DOM"],
+        "strict": true,
+        "module": "CommonJS",
+        "moduleResolution": "Node"
+    }
+}
+
+// compilerOtpions -> contains settings that determine how the TypeScript compiler should behave
+// lib -> determines which JavaScript libraries and APIs to use (DOM, ES2015, ES2016 etc) 
+// strict -> this is used to improve type safety and code quality
+// module -> determines the module system of the TypeScript compiler and the module type in the JavaScript files it outputs (AMD, CommonJS, ES6 etc)
+// allowJs -> allows us to use JavaScript inside TypeScript
+// moduleResolution -> refers to a setting that determines the strategy for finding and resolving module files
