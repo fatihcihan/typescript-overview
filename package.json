@@ -19,5 +19,8 @@
   "homepage": "https://github.com/fatihcihan/typescript-overview#readme",
   "dependencies": {
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.6"
   }
 }
