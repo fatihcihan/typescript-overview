@@ -5,8 +5,11 @@
         "strict": true,
         "module": "CommonJS",
         "moduleResolution": "Node",
-        "esModuleInterop": true
-    }
+        "esModuleInterop": true,
+        "outDir": "dist"        
+    },
+    "include": ["src/index.ts"],
+    "exclude": ["node_modules"]
 }
 
 // compilerOtpions -> contains settings that determine how the TypeScript compiler should behave
@@ -17,3 +20,6 @@
 // moduleResolution -> refers to a setting that determines the strategy for finding and resolving module files
 // esModuleInterop -> it is used to resolve incompatibilities between CommonJS and ES6 module systems and makes "import" expressions work more smoothly.
 // target -> specify which language the project should be compiled to (ES3, ES4, ES5, ES6 ect)
+// outDir -> a setting that determines the directory where the compilation output of the TypeScript project will be placed
+// include -> determines which files are compiled
+// exclude -> determines which files will not be compiled
