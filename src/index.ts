@@ -19,3 +19,35 @@ let surName: any = "surname ";      // any -> can be any type
 
 let time: undefined;    // only specifies the type of the time variable as undefined
 console.log(time);      // undefined
+
+// Primitive types -> boolean, number, string, null, undefined, symbol
+// Complex types -> array, tuple, object, function, class, enum
+
+
+// Object
+
+const person: {
+    name: string,
+    surname: string,
+    age: number,
+    test: "test1" | "test2"
+} = {
+    name: "John",
+    surname: "Done",
+    age: 30,
+    test: "test1"                // ---> a string type, but can only take the values "test1" or "test2".
+}
+
+
+let a: 10 | 20 | 30 = 10;
+// a = 25  // --> Type '25' is not assignable to type '30 | 10 | 20'
+
+// Array 
+// const arr = [];      // --> any
+// const arr: string[] = [];      // --> string array
+// const arr = [] as string[]   // --> string array
+// const arr: (number | boolean | string)[] = ["test", 30, true];
+// const arr = [] as Array<number | string>;    // as -> in TypeScript, the as operator is used when we want to declare the element types of an array
+// console.log(arr);
+
+
