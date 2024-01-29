@@ -6,7 +6,7 @@
         "module": "CommonJS",
         "moduleResolution": "Node",
         "esModuleInterop": true,
-        "outDir": "dist"        
+        "outDir": "dist"
     },
     "include": ["src/index.ts"],
     "exclude": ["node_modules"]
@@ -23,3 +23,4 @@
 // outDir -> a setting that determines the directory where the compilation output of the TypeScript project will be placed
 // include -> determines which files are compiled
 // exclude -> determines which files will not be compiled
+// downLevelIteration:true -> TypeScript performs the corresponding transpile operations to render for...of loops in accordance with older ES versions.
