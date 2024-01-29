@@ -10,9 +10,12 @@ test = 30;
 
 let myBool = true;
 myBool = !myBool;
-myBool = !!name;    
-console.log(myBool);   
+myBool = !!name;
+console.log(myBool);
 // !! -> is used to convert a value to boolean type and also to check if the value is "truthy" or "falsy".
 
+let surName: any = "surname ";      // any -> can be any type
+// any -> (for example, integration with external libraries or working with existing JavaScript code) can be useful
 
-
+let time: undefined;    // only specifies the type of the time variable as undefined
+console.log(time);      // undefined
