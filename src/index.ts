@@ -130,3 +130,64 @@ logPerson({ name: 'John', surname: 'Doe', age: 30 }).then(val => {
 test('John', 10); */
 
 
+//Type Aliasing
+/* type Person = {
+    name: string,
+    surname: string,
+    age: number,
+    state?: string      // ? ---> optional
+}
+
+const obj: Person = {
+    name: 'John',
+    surname: 'Doe',
+    age: 30
+} */
+
+/* type Colors = 'red' | 'green' | 'blue';
+
+const myColor: Colors = 'blue';
+const colorArr: Colors[] = [
+    "blue", "green", "red"
+]
+
+colorArr.forEach(color => {
+    console.log(color);
+}); */
+
+/* type Colors = 'red' | 'green' | 'blue';
+type CustomColors = 'magenta' | 'cyan' | 'turqoise';
+
+type AllColors = Colors | CustomColors;
+const colorArray: AllColors[] = ['blue', "green", "red", "cyan", "magenta", "turqoise"]
+console.log(colorArray); */
+
+// const colorArr: (Colors | CustomColors)[] = ['blue', "green", "red", "cyan", "magenta", "turqoise"];
+
+/* type Person = {
+    name: string,
+    surname: string,
+    age: number,
+};
+
+type Dog = {
+    age: number,
+    sort: string
+};
+
+// DogPerson :DD
+type DogPerson = Person & Dog   // we can combine two objects and make one object.
+
+const personDog: DogPerson = {
+    name: 'John',
+    surname: 'Doe',
+    age: 30,
+    sort: 'Great dane'
+} */
+
+/* const myMap = new Map<string, string>();
+myMap.set('John', 'Doe');   // ---> everything's okey
+// myMap.set('John', 30);  // ---> error */
+
+
+
