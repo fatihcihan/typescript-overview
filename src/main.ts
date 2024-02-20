@@ -24,3 +24,49 @@ let message;
 message = 'Hello world';        // type of message any 
 let count = (<string>message).length;
 let length = (message as string);
+
+//Functions
+/* function getAverage(a: number, b: number, c?: number): string {
+    let total = a + b;
+    let result: number;
+    if (c !== undefined) {
+        total += c;
+        result = total / 3;
+    } else {
+        result = total / 2;
+    }
+    return 'result: ' + result;
+}
+
+console.log(getAverage(10, 20, 30));
+console.log(getAverage(10, 20)); */
+
+// rest parameter example
+/* function getAverage(...rest: number[]): string {
+    let total = 0;
+    let count = 0;
+
+    for (let i = 0; i < rest.length; i++) {
+        total += rest[i];
+        count++;
+    }
+
+    const result = total / count;
+    return 'result: ' + result;
+}
+
+console.log(getAverage(10, 20, 30, 40, 50));    // as much as we want we can give parameter */
+
+// arrow function representation of getAverage function
+const getAverage = (...rest: number[]): string => {
+    let total = 0;
+    let count = 0;
+
+    for (let i = 0; i < rest.length; i++) {
+        total += rest[i];
+        count++;
+    }
+
+    const result = total / count;
+    return 'result: ' + result;
+}
