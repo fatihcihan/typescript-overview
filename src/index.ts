@@ -129,6 +129,13 @@ logPerson({ name: 'John', surname: 'Doe', age: 30 }).then(val => {
 }
 test('John', 10); */
 
+/* //Function Type Annotation
+type functionThatReturnsBoolean = (id: string, password: string) => boolean
+
+const myFunction: functionThatReturnsBoolean = (id, password) => {
+    return true;
+} */
+
 
 //Type Aliasing
 /* type Person = {
@@ -189,5 +196,31 @@ const personDog: DogPerson = {
 myMap.set('John', 'Doe');   // ---> everything's okey
 // myMap.set('John', 30);  // ---> error */
 
+//Object Typing
+/* type MyObject = {
+    name: string,
+    age: number
+} */
+
+type MyObject = Partial<{           // --> name and age optional
+    name: string,
+    age: number,
+    [key: string]: any
+}>
+
+const myObj: MyObject = {
+    name: 'john',
+    age: 30,
+    city: 'toronto'
+}
+
+/* const myObj2: Record<string, boolean> = {
+    isActive: true
+} */
+
+const myObj3: Record<string, { age: number }> = {
+    john: { age: 30 },
+    test: { age: 20 }
+}
 
 
