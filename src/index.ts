@@ -224,3 +224,27 @@ const myObj3: Record<string, { age: number }> = {
 }
 
 
+//Interfaces    --> user-expandable
+/* interface Person {
+    name: string,
+    surname: string
+}
+
+const john: Person = {
+    name: 'John',
+    surname: 'Doe'
+}
+
+const name: Person['name'] = 'john'; */
+
+/* interface MyArray {
+    [index: number]: string | number;
+}
+
+ const array: MyArray = {
+    0: 'john',
+    1: 'doe',
+    // test:2   --> error
+} */
+
+// const array: MyArray = ['John', 'Doe', 30]    // if we give true we get an error
