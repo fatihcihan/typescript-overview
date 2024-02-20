@@ -70,3 +70,26 @@ const getAverage = (...rest: number[]): string => {
     const result = total / count;
     return 'result: ' + result;
 }
+
+//Interface
+interface Person {
+    name: string;
+    age: number;
+    greet(): void;
+}
+
+class Student implements Person {
+    name: string;
+    age: number;
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet(): void {
+        console.log(`Hello, my name is ${this.name} and i'm ${this.age} years old.`);
+    }
+}
+
+const student1 = new Student("John", 20);
+student1.greet();
