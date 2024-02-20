@@ -18,3 +18,9 @@ let transfer = Payment.transfer;    // 1
 let eft = Payment.eft;              // 2 */
 
 enum Payment { loan = 0, transfer = 1, eft = 2 }
+
+// Type Assertions
+let message;
+message = 'Hello world';        // type of message any 
+let count = (<string>message).length;
+let length = (message as string);
