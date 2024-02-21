@@ -93,3 +93,47 @@ class Student implements Person {
 
 const student1 = new Student("John", 20);
 student1.greet();
+
+//Access Modifier
+class Car {
+    public brand: string;
+    private model: string;
+    protected year: number;
+
+    constructor(brand: string, model: string, year: number) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    public displayDetails(): void {
+        console.log(`Brand: ${this.brand}, Model: ${this.model}, Year: ${this.year}`);
+    }
+}
+
+class SUV extends Car {
+    private towCapacity: number;
+
+    constructor(brand: string, model: string, year: number, towCapacity: number) {
+        super(brand, model, year);
+        this.towCapacity = towCapacity;
+    }
+
+    public displayDetails(): void {
+        super.displayDetails();
+        console.log(`Towing Capacity: ${this.towCapacity} lbs`);
+    }
+}
+
+const car1 = new Car("Toyota", "Camry", 2020);
+console.log(car1.brand); // Public member, accessible
+// console.log(car1.model); // Error: 'model' is private and only accessible within class 'Car'
+// console.log(car1.year); // Error: 'year' is protected and only accessible within class 'Car' and its subclasses
+
+const suv1 = new SUV("Ford", "Explorer", 2021, 5000);
+console.log(suv1.brand); // Public member, accessible
+// console.log(suv1.model); // Error: 'model' is private and only accessible within class 'Car'
+// console.log(suv1.year); // Error: 'year' is protected and only accessible within class 'Car' and its subclasses
+// console.log(suv1.towCapacity); // Error: 'towCapacity' is private and only accessible within class 'SUV'
+
+suv1.displayDetails(); // Accessing public method of the class
