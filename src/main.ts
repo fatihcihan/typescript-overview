@@ -151,3 +151,23 @@ const strings = ['apple', 'banana', 'orange'];
 const reversedStrings = reverseArray(strings);
 console.log(reversedStrings);
 
+//Async
+function delayedGreeting(name: string): Promise<string> {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            // resolve('hello ' + name);
+            reject('An error occured');
+        }, 2000);
+    });
+};
+
+async function greetAsync() {
+    try {
+        const greeting = await delayedGreeting('John');
+        console.log(greeting);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+greetAsync();
