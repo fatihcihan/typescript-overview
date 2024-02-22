@@ -137,3 +137,17 @@ console.log(suv1.brand); // Public member, accessible
 // console.log(suv1.towCapacity); // Error: 'towCapacity' is private and only accessible within class 'SUV'
 
 suv1.displayDetails(); // Accessing public method of the class
+
+//Generics
+function reverseArray<T>(array: T[]): T[] {
+    return array.reverse();
+}
+
+const numbers = [1, 2, 3, 4, 5];
+const reversedNumbers = reverseArray(numbers);
+console.log(reversedNumbers);       // [ 5, 4, 3, 2, 1 ]
+
+const strings = ['apple', 'banana', 'orange'];
+const reversedStrings = reverseArray(strings);
+console.log(reversedStrings);
+
